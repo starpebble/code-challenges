@@ -18,10 +18,13 @@ function readGraph(lines) {
         var myArray = gregex.exec(line);
         if (myArray && myArray.length === 3) {
           var [l,cityFrom,cityTo] = myArray;
-          graph.addEdge(cityFrom, cityTo);
-          graph.addEdge(cityTo, cityFrom);
-        } else {
-          console.warn('⚠️  Warning: Ignoring graph request where the from and to city are the same name: ' + line);
+          if (cityFrom !== cityTo) {
+            graph.addEdge(cityFrom, cityTo);
+            graph.addEdge(cityTo, cityFrom);            
+          }
+          else {
+            console.warn('⚠️  Warning: Ignoring graph request where the from and to city are the same name: ' + line);
+          }
         }
       }
       catch(e) {
