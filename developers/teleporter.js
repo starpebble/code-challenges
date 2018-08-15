@@ -14,10 +14,12 @@ function readGraph(lines) {
   for (var line of lines) {
     if (line.match('^.+ - .+$')) {
       try {
-        var towns = line.split(' - ');
-        if (towns[0] !== towns[1]) {
-          graph.addEdge(towns[0], towns[1]);
-          graph.addEdge(towns[1], towns[0]);
+        var gregex = /^(.+) - (.+)$/;
+        var myArray = gregex.exec(line);
+        if (myArray && myArray.length === 3) {
+          var [l,cityFrom,cityTo] = myArray;
+          graph.addEdge(cityFrom, cityTo);
+          graph.addEdge(cityTo, cityFrom);
         } else {
           console.warn('⚠️  Warning: Ignoring graph request where the from and to city are the same name: ' + line);
         }

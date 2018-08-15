@@ -17,5 +17,4 @@ then
 
 ### Assumptions
 
-* City names do not have hyphens in them
 * A graph edge must be between two different cities
