@@ -1,0 +1,28 @@
+{
+  "name": "teleporters",
+  "version": "1.0.0",
+  "description": "starpebbles solution for teleporters",
+  "main": "teleporter.js",
+  "private": "yes",
+  "dependencies": {
+    "eslint": "^5.3.0",
+    "graph-data-structure": "^1.8.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/starpebble/code-challenges.git"
+  },
+  "keywords": [
+    "bytecubed"
+  ],
+  "author": "starpebble",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/starpebble/code-challenges/issues"
+  },
+  "homepage": "https://github.com/starpebble/code-challenges#readme"
+}
