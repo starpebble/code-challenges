@@ -14,3 +14,8 @@ the filename on the command line.
 then
 
 ```node teleporter.js sample.txt```
+
+### Assumptions
+
+* City names do not have hyphens in them
+* A graph edge must be between two different cities
