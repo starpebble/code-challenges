@@ -97,7 +97,7 @@ function answerQuestions(lines) {
 
     //example: can I teleport from Springton to Atlantis
     var canteleportregex = /^can I teleport from (.+) to (.+)$/;
-    var myArray = canteleportregex.exec(line);
+    myArray = canteleportregex.exec(line);
     if (myArray && myArray.length === 3) {
       var [l,cityFrom,cityTo] = myArray;
       var haspath = canteleport(cityFrom,cityTo);
@@ -106,7 +106,7 @@ function answerQuestions(lines) {
 
     //example: loop possible from Oaktown: yes
     var looppossible = /^loop possible from (.+)$/;
-    var myArray = looppossible.exec(line);
+    myArray = looppossible.exec(line);
     if (myArray && myArray.length === 2) {
       var city = myArray[1];
       var hasloop = cityhasloop(city);
