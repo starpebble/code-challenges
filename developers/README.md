@@ -10,4 +10,5 @@ Here is my solution for the teleporter.  My solution requires NodeJS 8.11.2 and 
 Just install NodeJS.  Put the input into a file.  Then run the teleporter.js file with node, providing
 the filename on the command line.
 
+```npm install```
 ```node teleporter.js sample.txt```
